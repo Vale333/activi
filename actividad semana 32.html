@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Actividad semana 32</title>
+</head>
+<style>
+	.c1{
+		position:absolute;
+		background-color: #FFB6C1;
+		width:1340px;
+		height:100px;
+		left:10px;
+		top:20px;
+		text-align: center;
+		font-size: 70px;
+		color: white;
+		box-shadow: 10px 10px 5px grey;
+
+	}
+	.c2{
+		position: absolute;
+		background-color: #6495ED;
+		width:100px;
+		height:0px;
+		left:600px;
+		top:150px;
+		transition: 2s all;
+		 box-shadow: 10px 10px 5px grey;
+
+	}
+
+    .c3{
+    	position: absolute;
+		background-color: red;
+		width:60px;
+		height:0px;
+		left:1180px;
+		top:150px;
+		transition: 2s all;
+		text-align: center;
+		color: white;
+    }
+    .c4{
+        position: absolute;
+		background-color: #C71585;
+		width:150px;
+		height:150px;
+		left:100px;
+		top:150px;
+		color: white;
+		font-size: 30px;
+		text-align: center;
+		box-shadow: 10px 10px 5px grey;
+	
+    }
+
+    
+   
+    .c6{
+    	position: absolute;
+		background-color: 	#90EE90;
+		width:0px;
+		height:0px;
+		left:550px;
+		top:250px;
+		text-align: center;
+		font-size: 30px;
+		box-shadow: 10px 10px 5px grey;
+		
+    }
+    .c7{
+    	position: absolute;
+		background-color: #00746B;
+		width:0px;
+		height:0px;
+		left:550px;
+		top:250px;
+		text-align: center;
+		font-size: 30px;
+		transition: 2s all;
+		
+    }
+    .cerrar6{
+    	position: absolute;
+		background-color: red;
+		width:0px;
+		height:0px;
+		left:1200px;
+		top:250px;
+		text-align: center;
+		color: white;
+		font-size: 30px;
+
+    }
+    .cerrar7{
+    	position: absolute;
+		background-color: red;
+		width:0px;
+		height:0px;
+		left:550px;
+		top:250px;
+		text-align: center;
+		font-size: 30px;
+    }
+	.imagen{
+		position: absolute;
+		width:0px;
+		height:0px;
+		left:230px;
+		top:70px;
+		z-index: 30;
+		transition: 2s all;
+		box-shadow: 10px 10px;
+	}
+
+</style>
+
+
+<body bgcolor="#E6E6FA">
+<div class="c1" onclick="abrir()">Neosistemas</div>
+<div class="c2" id="f1"><div><img src="escudo.jpg" class="imagen" id="d2"></div></div>
+<div class="c3" id="f2" onclick="cerrar()"></div>
+<div class="c4" id="f3" onclick="abrir1()"></div>
+<div class="c5" id="f4" onclick="abrir2()"></div>
+<div class="c6" id="f5" onmousemove="mover(event)"></div>
+<div class="cerrar6" id="f6" onclick="cerrar1()"></div>
+<div class="cerrar7" id="f7" onclick="cerrar2()"></div>
+<script>
+	function abrir() {
+		f1.style.width=650+"px";
+		f1.style.height=400+"px";
+		d2.style.width=300+"px";
+		d2.style.height=300+"px";
+		f2.style.height=50+"px";
+	
+
+    function aparecer() {
+		d2.style.width=0+"px";
+		d2.style.height=0+"px";
+
+	}
+	setTimeout(aparecer,3000);
+
+	}
+
+	function cerrar() {
+        f1.style.width=0+"px";
+		f1.style.height=0+"px";
+		f2.style.height=0+"px";
+		f2.innerHTML="";
+	
+		
+	}
+	function abrir1(argument) {
+
+		f5.style.width=700+"px";
+		f5.style.height=50+"px";
+        f6.style.height=50+"px";
+		f6.style.width=100+"px";
+		
+	}
+	function cerrar1 (argument) {
+	f5.style.width=0+"px";
+		f5.style.height=0+"px";
+		f6.style.height0+"px";
+		f6.style.width=0+"px";
+		f6.innerHTML="";
+		f5.innerHTML="";
+	}
+
+    function mover(event){
+			x=event.clientX;
+			y=event.clientY;
+			f5.innerHTML=x+"  "+y;
+
+		}
+
+	
+</script>
+</body>
+</html>
